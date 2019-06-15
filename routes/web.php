@@ -16,7 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('/ht', function () { return view('halamantabel'); });
-Route::get('/hf', function () { return view('halamanform'); });
+Route::get('/hf', function () { return view('halamanform'); })->name('halaman.form');
 
 //Route::get('/ht', 'halaman@tabel')->name('halaman.tabel');
 //Route::get('/hf', 'halaman@form')->name('halaman.form');
+
+//post data to mantra
+Route::post('/postdata', 'proses@postData')->name('dt.postdata');
+
+//datatable
+Route::get('/dt', 'datatablegen@getDataTable')->name('dt.tabel');
