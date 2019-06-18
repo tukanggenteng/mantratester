@@ -25,4 +25,6 @@ Route::get('/hf', function () { return view('halamanform'); })->name('halaman.fo
 Route::post('/postdata', 'proses@postData')->name('dt.postdata');
 
 //datatable
-Route::get('/dt', 'datatablegen@getDataTable')->name('dt.tabel');
+Route::get('/dt', 'datatablegen@getDataTableV')->name('dt.tabel');
+Route::get('/dtdd', 'datatablegen@getDataTabledd')->name('dtdd.tabel');
+Route::get('/dtvd', 'datatablegen@getDataTablevd')->name('dtvd.tabel');
